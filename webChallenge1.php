@@ -1,4 +1,10 @@
 <?php
+    /**
+     * ZADATAK - funkcija, razlika između dva datuma
+     * Kreirati funkciju koja izračunava razliku između dva proslijeđena datuma.
+     * Ako je drugi datum neproslijeđen, uzimamo trenutni datum.
+     * Treći parametar iskoristiti za željeni ispis, odnosno da li će razlika biti ispisana u danima, mjesecima i godinama, ili u nekoj drugoj kombinaciji
+     */
     function dateDifference($date1,$date2,$format){
         if(empty($date2)){
             $date2 = Date("d.m.Y");
