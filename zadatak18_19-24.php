@@ -11,7 +11,7 @@
         public $connection;
     
         //MySQLi objektni pristup
-        public function connectMySQLi(){
+        /*public function __construct(){
             $this->connection = new mysqli($this->servername,$this->username,$this->password,$this->database);
             if($this->connection->connect_error){
                 die("Konekcija nije uspjela - " . $this->connection->connect_error);
@@ -19,10 +19,10 @@
             else{
                 echo "Konekcija je uspostavljena";
             }
-        }
+        }*/
 
         //PDO
-        public function connectPDO(){
+        public function __construct(){
             try{
                 $this->connection = new PDO("mysql:host=" . $this->servername . ";dbname=" . $this->database,$this->username,$this->password);
                 $this->connection->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
@@ -35,7 +35,5 @@
     }
 
     $baza = new Connection();
-    $baza->connectMySQLi();
     echo "<br>";
-    $baza->connectPDO();
 ?>
