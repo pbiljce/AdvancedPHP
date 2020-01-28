@@ -25,6 +25,7 @@
         public function __construct(){
             try{
                 $this->connection = new PDO("mysql:host=" . $this->servername . ";dbname=" . $this->database,$this->username,$this->password);
+                $this->connection->exec("set names utf8");
                 $this->connection->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
                 //echo "Konekcija je uspostavljena";
             }
