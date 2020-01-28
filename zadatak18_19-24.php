@@ -7,7 +7,7 @@
         public $servername = "localhost";
         public $username = "root";
         public $password = "";
-        public $database = "users";
+        public $database = "books";
         public $connection;
     
         //MySQLi objektni pristup
@@ -26,7 +26,7 @@
             try{
                 $this->connection = new PDO("mysql:host=" . $this->servername . ";dbname=" . $this->database,$this->username,$this->password);
                 $this->connection->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-                echo "Konekcija je uspostavljena";
+                //echo "Konekcija je uspostavljena";
             }
             catch(PDOException $e){
                 echo "Konekcija nije uspjela" . $e->getMessage();
@@ -34,6 +34,6 @@
         }
     }
 
-    $baza = new Connection();
-    echo "<br>";
+    //$baza = new Connection();
+    //echo "<br>";
 ?>
