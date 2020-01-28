@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jan 25, 2020 at 08:24 PM
+-- Generation Time: Jan 28, 2020 at 07:01 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -35,21 +35,21 @@ CREATE TABLE IF NOT EXISTS `book` (
   `book_price` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `book_author` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `book_publisher` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `book_status` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `book_status` int(50) NOT NULL,
   `book_datetime` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`book_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `book`
 --
 
 INSERT INTO `book` (`book_id`, `book_title`, `book_price`, `book_author`, `book_publisher`, `book_status`, `book_datetime`) VALUES
-(1, 'Knjiga Naslov 1', '20,5', 'Knjiga Autor 1', 'Knjiga Izdavač 1', 'U pripremi', '12.12.2020'),
-(2, 'Knjiga Naslov 2', '10,5', 'Knjiga Autor 2', 'Knjiga Izdavač 2', 'Na stanju', '01.01.2020'),
-(3, 'Knjiga Naslov 3', '12', 'Knjiga Autor 3', 'Knjiga Izdavač 3', 'Na stanju', '25.03.2019'),
-(4, 'Knjiga Naslov 4', '15,9', 'Knjiga Autor 4', 'Knjiga Izdavač 4', 'U pripremi', '25.03.2020'),
-(5, 'Knjiga Naslov 5', '22', 'Knjiga Autor 5', 'Knjiga Izdavač 5', 'Na stanju', '25.03.2019');
+(1, 'Knjiga Naslov 1', '20,5', 'Knjiga Autor 1', 'Knjiga Izdavač 1', 1, '12.12.2020'),
+(3, 'Knjiga Naslov 3', '100', 'Knjiga Autor 3', 'Knjiga Izdavač 3', 1, '25.03.2019'),
+(4, 'Knjiga Naslov 4', '15,9', 'Knjiga Autor 4', 'Knjiga Izdavač 4', 1, '25.03.2020'),
+(5, 'Knjiga Naslov 5', '22', 'Knjiga Autor 5', 'Knjiga Izdavač 5', 0, '25.03.2019'),
+(6, 'Knjiga Naslov 55', '10', 'Knjiga Autor 1', 'Knjiga IzdavaÄ 1', 1, '12.12.2020');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
